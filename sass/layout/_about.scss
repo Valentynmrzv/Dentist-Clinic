@@ -3,19 +3,91 @@
     background-size: 960px 200px;
     background-repeat: no-repeat;
     background-position: 100% 100%, 0 0;
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 800px) {
         background-image: url(../img/bg-tablet.png), url(../img/bg-top.png);
-        background-size: 1399px 250px;
+        background-size: 1200px 200px;
     }
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1050px) {
         background-color: var(--primary-bg-color);
         background-image: url(../img/bg@2x.png), url(../img/bg-top.png);
         background-repeat: no-repeat;
-        background-size: 1920px 467px;
+        background-size: 1400px 300px;
       
     }
 
 }
+
+.about-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-top: 130px;
+    padding-bottom: 130px;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+
+}
+.preview {
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+        max-width: 400px;
+    }
+    @media screen and (min-width: 1100px) {
+        max-width: 550px;
+    }
+
+}
+
 .info {
-    height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-left: 30px;
+    padding-right: 30px;
+    @media screen and (min-width: 768px) {
+        
+
+        width: 300px;
+        height: 300px;
+    }
+    &__title {
+        margin-top: 30px;
+        color: var(--primary-text-color);
+        @include font($fw: 700, $fs: 30px, $lh: 34px, $ls: -1px);
+
+        @media screen and (min-width: 1050px) {
+            @include font($fw: 700, $fs: 24px, $lh: 28px, $ls: -1px);
+            color: var(--primary-text-color);
+        }
+
+
+        @media screen and (min-width: 1050px) {
+            @include font($fw: 700, $fs: 48px, $lh: 60px, $ls: -1px);
+            color: var(--primary-text-color);
+        }
+    }
+
+    &__text {
+        margin-top: 20px;
+        color: var(--primary-text-color);
+        
+        @include font($fw: 600, $fs: 20px, $lh: 22px, $ls: -0.2px);
+
+        @media screen and (min-width: 1050px) {
+            @include font($fw: 600, $fs: 16px, $lh: 18px, $ls: -1px);
+            color: var(--primary-text-color);
+            }
+        @media screen and (min-width: 1050px) {
+            @include font($fw: 600, $fs: 24px, $lh: 34px, $ls: -0.2px);
+        }
+
+    }
 }

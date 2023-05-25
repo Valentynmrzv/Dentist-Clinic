@@ -93,3 +93,19 @@
     }
 
 }
+// .aaa {
+//     &__list {
+//         display: flex;
+//             flex-direction: row;
+//             align-items: center;
+//             padding-bottom: 20px;
+//     }
+//     &___item {
+//         max-width: 380px;
+//             width: calc((100% - 20px) / 2);
+        
+//             &:nth-child(2n) {
+//                 margin-right: 0px;
+//             }
+//     }
+// }

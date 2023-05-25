@@ -59,15 +59,17 @@ address {
   min-width: 320px;
   margin: 0 auto;
   padding: 0;
-  max-width: 1920px;
+  max-width: 1400px;
+  outline: 1px solid red;
 }
 
 .container {
   min-width: 320px;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px;
+  outline: 1px solid green;
 }
 
 .header {
@@ -168,7 +170,7 @@ address {
     gap: 40px;
   }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1200px) {
   .contact {
     gap: 60px;
   }
@@ -193,7 +195,7 @@ address {
     letter-spacing: 0.02em;
   }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1200px) {
   .contact__item {
     font-weight: 700;
     font-size: 25px;
@@ -235,7 +237,7 @@ address {
     left: 50px;
   }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1200px) {
   .contact__text {
     font-weight: 400;
     font-size: 13px;
@@ -400,35 +402,29 @@ address {
   background-repeat: no-repeat;
   background-position: 100% 100%;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 800px) {
   .hero {
     background-image: url(../img/bg-tablet.png);
-    background-size: 1399px 250px;
+    background-size: 1200px 200px;
     background-repeat: no-repeat;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1050px) {
   .hero {
     background-color: var(--primary-bg-color);
-    background-image: url(../img/bg@2x.png), url(../img/children.png);
+    background-image: url(../img/bg@2x.png), url(../img/children1.png);
     background-repeat: no-repeat;
-    background-size: 1920px 467px, 1148px 1260px;
+    background-size: 1400px 300px, 750px 700px;
     background-position: 100% 100%, 100% 100%;
-    padding-top: 190px;
-    padding-bottom: 480px;
-  }
-}
-@media screen and (min-width: 1400px) {
-  .hero {
-    padding-top: 190px;
-    padding-bottom: 480px;
+    padding-top: 90px;
+    padding-bottom: 90px;
   }
 }
 
 .hero-wrapper {
   display: block;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1050px) {
   .hero-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -453,7 +449,7 @@ address {
       -ms-flex-align: center;
           align-items: center;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1050px) {
   .entery {
     padding: 0;
     margin-left: 0;
@@ -479,7 +475,7 @@ address {
     letter-spacing: -1px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1050px) {
   .entery__title {
     text-align: start;
     font-weight: 700;
@@ -512,7 +508,7 @@ address {
     letter-spacing: 0.03em;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1050px) {
   .entery__text {
     text-align: start;
     font-weight: 500;
@@ -541,7 +537,7 @@ address {
   border-radius: 8px;
   border: none;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1050px) {
   .entery__button {
     margin-top: 20px;
     width: 386px;
@@ -687,21 +683,133 @@ address {
   background-repeat: no-repeat;
   background-position: 100% 100%, 0 0;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 800px) {
   .about {
     background-image: url(../img/bg-tablet.png), url(../img/bg-top.png);
-    background-size: 1399px 250px;
+    background-size: 1200px 200px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1050px) {
   .about {
     background-color: var(--primary-bg-color);
     background-image: url(../img/bg@2x.png), url(../img/bg-top.png);
     background-repeat: no-repeat;
-    background-size: 1920px 467px;
+    background-size: 1400px 300px;
+  }
+}
+
+.about-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+@media screen and (min-width: 768px) {
+  .about-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+}
+
+.preview {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .preview {
+    max-width: 400px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .preview {
+    max-width: 550px;
   }
 }
 
 .info {
-  height: 900px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+@media screen and (min-width: 768px) {
+  .info {
+    width: 300px;
+    height: 300px;
+  }
+}
+.info__title {
+  margin-top: 30px;
+  color: var(--primary-text-color);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.1333333333;
+  letter-spacing: -1px;
+}
+@media screen and (min-width: 1050px) {
+  .info__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.1666666667;
+    letter-spacing: -1px;
+    color: var(--primary-text-color);
+  }
+}
+@media screen and (min-width: 1050px) {
+  .info__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.25;
+    letter-spacing: -1px;
+    color: var(--primary-text-color);
+  }
+}
+.info__text {
+  margin-top: 20px;
+  color: var(--primary-text-color);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.1;
+  letter-spacing: -0.2px;
+}
+@media screen and (min-width: 1050px) {
+  .info__text {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.125;
+    letter-spacing: -1px;
+    color: var(--primary-text-color);
+  }
+}
+@media screen and (min-width: 1050px) {
+  .info__text {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.4166666667;
+    letter-spacing: -0.2px;
+  }
 }/*# sourceMappingURL=main.css.map */

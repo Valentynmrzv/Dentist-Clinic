@@ -56,7 +56,7 @@
         align-items: center;
         gap: 40px;
     }
-    @media screen and (min-width: 1400px) {
+    @media screen and (min-width: 1200px) {
         gap: 60px;
     }
     
@@ -75,7 +75,7 @@
                 @include font($fw: 600, $fs: 14px, $lh: 18px, $ls: 0.02em);
             }
         }
-        @media screen and (min-width: 1400px) {
+        @media screen and (min-width: 1200px) {
             @include font($fw: 700, $fs: 25px, $lh: 38px, $ls: 0.02em);
             address {
                 @include font($fw: 600, $fs: 16px, $lh: 23px, $ls: 0.02em);
@@ -103,7 +103,7 @@
             top: 28px;
             left: 50px;
         }
-        @media screen and (min-width: 1400px) {
+        @media screen and (min-width: 1200px) {
             @include font($fw: 400, $fs: 13px, $lh: 20px, $ls: 0.02em);
             top: 32px;
         }
