@@ -1,0 +1,21 @@
+.about {
+    background-image: url(../img/bg-mobile.png), url(../img/bg-top.png);
+    background-size: 960px 200px;
+    background-repeat: no-repeat;
+    background-position: 100% 100%, 0 0;
+    @media screen and (min-width: 900px) {
+        background-image: url(../img/bg-tablet.png), url(../img/bg-top.png);
+        background-size: 1399px 250px;
+    }
+    @media screen and (min-width: 1200px) {
+        background-color: var(--primary-bg-color);
+        background-image: url(../img/bg@2x.png), url(../img/bg-top.png);
+        background-repeat: no-repeat;
+        background-size: 1920px 467px;
+      
+    }
+
+}
+.info {
+    height: 900px;
+}
