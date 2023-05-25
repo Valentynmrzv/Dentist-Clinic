@@ -1,72 +1,111 @@
-.hero-background {
-    min-width: 320px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 480px;
-    background: rgba(47, 48, 58, 0.4);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(.././images/mobile/hero.jpg);
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(.././images/mobile/hero@2x.jpg);
-    }
+.hero {
+    background-image: url(../img/bg-mobile.png);
+    background-size: 960px 200px;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
 
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    @media screen and (min-width: 768px) {
-        max-width: 768px;
-        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(.././images/tablet/hero.jpg);
-            @media (min-device-pixel-ratio: 2),
-            (min-resolution: 192dpi),
-            (min-resolution: 2dppx) {
-                background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(.././images/tablet/hero@2x.jpg);
-            }
-        }
+    @media screen and (min-width: 900px) { 
+        background-image: url(../img/bg-tablet.png);
+        background-size: 1399px 250px;
+        background-repeat: no-repeat;
+    }
 
     @media screen and (min-width: 1200px) {
-        max-width: 1600px;
-        padding-top: 200px;
-        padding-bottom: 200px;
-        margin-bottom: 47px;
-        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(.././images/desktop/hero.jpg);
-        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-                background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(.././images/desktop/hero@2x.jpg);
-            }
+        background-color: var(--primary-bg-color);
+        background-image: url(../img/bg@2x.png), url(../img/children.png);
+        background-repeat: no-repeat;
+        background-size: 1920px 467px, 1148px 1260px;
+        background-position: 100% 100%, 100% 100%;
+        padding-top: 190px;
+        padding-bottom: 480px;
+    }
+    @media screen and (min-width: 1400px) {
+        padding-top: 190px;
+        padding-bottom: 480px;
+        
+    }
+    
+}
+.hero-wrapper {
+    display: block;
+    @media screen and (min-width: 1200px) {
+        display: flex;
     }
 }
-.order {
-    display: block;
-    text-align: center;
-    padding-top: 118px;
-    padding-bottom: 118px ;
+.entery {
+    outline: 1px solid blue;
+    padding: 50px 30px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 320px;
+    max-width: 695px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: 1200px) {
+        padding: 0;
+        margin-left: 0;
+        height: 468px;
+        align-items: flex-start;
+    }
+
+
+
 
     &__title {
-        color: #FFFFFF;
-
-        @include font($fw: 900, $fs: 26px, $lh: 42px, $ls: 0.06em);
-        text-transform: uppercase;
-    }
-    &__button {
         margin-top: 30px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 32px;
-        padding-right: 32px;
+        @include font($fw: 700, $fs: 27px, $lh: 30px, $ls: -1px);
+        text-align: center;
+        @media screen and (min-width: 768px) {
+            @include font($fw: 700, $fs: 36px, $lh: 40px, $ls: -1px);
+        }
+        @media screen and (min-width: 1200px) {
+            text-align: start;
+            @include font($fw: 700, $fs: 43px, $lh: 48px, $ls: -1px);
+        }
 
-        border: 0;
-        background: var(--brand-color);
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-        border-radius: 5px;
-        cursor: pointer;
-
-        color: #FFFFFF;
-        @include font($fw: 700, $fs: 16px, $lh: 30px, $ls: 0.06em);
-
-        transition-property: transform;
-        transition-duration: 300ms;
-
-        &:hover,
-        &:focus {
-            transform: scale(1.1);
+        @media screen and (min-width: 1400px) {
+            @include font($fw: 700, $fs: 53px, $lh: 60px, $ls: -1px);
         }
     }
+
+    &__text{
+        margin-top: 30px;
+        @include font($fw: 500, $fs: 20px, $lh: 22px);
+        text-align: center;
+        @media screen and (min-width: 768px) {
+            @include font($fw: 500, $fs: 22px, $lh: 28px);
+        }
+        @media screen and (min-width: 1200px) {
+            text-align: start;
+            @include font($fw: 500, $fs: 24px, $lh: 30px);
+        }
+        @media screen and (min-width: 1400px) {
+            @include font($fw: 500, $fs: 24px, $lh: 34px);
+        }
+    }
+
+    &__button {
+        margin-top: 20px;
+        min-width: 250px;
+        height: 88px;
+        @include font($fw: 700, $fs: 14px, $lh: 16px, $ls: -1px);
+        background: #FED84C;
+        border-radius: 8px;
+        border: none;
+        @media screen and (min-width: 1400px) {
+            margin-top: 20px;
+            width: 386px;
+            height: 88px;
+            @include font($fw: 700, $fs: 18px, $lh: 27px, $ls: -1px);
+            background: #FED84C;
+            border-radius: 8px;
+            border: none;
+        }
+
+    }
+
+
 }
