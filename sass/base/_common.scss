@@ -7,8 +7,8 @@
 body {
     background-color: var(--primary-bg-color);
 
-    font-family: "Roboto", sans-serif;
-    @include font()
+    font-family: var(--primary-font-family), sans-serif;
+    // @include font()
 
 }
 img {

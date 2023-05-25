@@ -1,142 +1,101 @@
 .header {
-    border-bottom: 1px solid #ECECEC;
+    background-color: #081130;
 }
-.header-nav {   
+
+.header-wrapper {
     padding-top: 10px;
     padding-bottom: 10px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-
-    @media screen and (min-width: 768px) {
-        padding-top: 21px;
-        padding-bottom: 21px;
-    }
-    @media screen and (min-width: 1200px) {
-        padding-top: 24px;
-        padding-bottom: 25px;
+    align-items: center;
+    min-width: 320px;
+    @media screen and (min-width: 1000px) {
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 }
-
 .nav {
-    @media screen and (min-width: 768px) {
-        display: flex;
-        justify-content: space-evenly;
-    }
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
     &__list {
-        display: none;
-        @media screen and (min-width: 768px) {
-            display: flex;
-            flex-wrap: nowrap;
-            justify-content: space-evenly;
-            gap: 50px;
-            align-items: center;
-            padding-left: 88px;
-        }
-            @media screen and (min-width: 1200px) {
-                flex-direction: row;
-                gap: 30px;
-                align-items: center;
-            }
-        }
-    &__link{    
-        @media screen and (min-width: 768px) {
-            position: relative;
-            @include font($fw: 500, $fs: 14px, $lh: 16px, $ls: 0.02em);
-            color: var(--title-text-color);
-            transition: color var(--transition-property);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media screen and (min-width: 1000px) {
+        flex-direction: row;
+        @include font($fw: 700, $fs: 20px, $lh: 26px, $ls: 0.02em);
+    }
         
-            &:hover,
-            &:focus {
-                color: var(--brand-color);
-            }
-        }
     }
-}
-.header-contact__list {
-    display: none;
-}
-
-.current::after {
-    @media screen and (min-width: 768px) {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 47px;
-        display: block;
-        width: 100%;
-        height: 4px;
-        border-radius: 2px;
-        background-color: var(--brand-color);
-    }
-    @media screen and (min-width: 1200px) {
-        top: 46px;
-    }
-}
-.header-contact {
-    &__list {
-        display: none;
-
-        @media screen and (min-width: 768px) {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            gap: 10px;
-            align-items: flex-start;
-        }
-        @media screen and (min-width: 1200px) {
-            flex-direction: row;
-            gap: 30px;
-            align-items: center;
-        }
-    }
-
-    &__item {
-        @media screen and (min-width: 768px) {
-            display: flex;
-            align-items: baseline;
-            justify-content: center;
-            text-decoration: none;
-        }
-    }
+    
 
     &__link {
-        @media screen and (min-width: 768px) {
-            display: flex;
-            align-items: center;
-            @include font($fw: 500, $fs: 12px, $lh: 14px, $ls: 0.02em);
-            color: #757575;
-            fill: #757575;
-            transition: color var(--transition-property);
-            transition-property: transform;
-            transition-duration: 300ms;
-            
+        color: var(--primary-text-color);
+    }
+}
 
-            &:hover,
-            &:focus {
-                color: var(--brand-color);
-                fill: var(--brand-color);
-                @media screen and (min-width: 1200px) {
-                    transform: scale(1.1);
-                }
+.contact {
+    display: none;
+    @media screen and (min-width: 530px) {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.03em;
+    }
+    @media screen and (min-width: 1000px) {
+        flex-direction: row;
+        align-items: center;
+        gap: 40px;
+    }
+    
+
+    &__item {
+        color: var(--primary-text-color);
+        text-align: end;
+        @media screen and (min-width: 1000px) {
+            position: relative;
+            text-align: center;
+            @include font($fw: 700, $fs: 20px, $lh: 26px, $ls: 0.02em);
+    
+            address {
+                @include font($fw: 600, $fs: 14px, $lh: 18px, $ls: 0.02em);
             }
         }
     }
+    &__link {
+        color: var(--primary-text-color);
+        
+    }
+
     &__icon {
-        @media screen and (min-width: 768px) {
-            margin-right: 8px;
-        }
-        @media screen and (min-width: 1200px) {
-            margin-right: 10px;
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+    }
+    &__text {
+        margin-top: 20px;
+        @include font($fw: 400, $fs: 14px, $lh: 16px, $ls: 0.02em);
+        @media screen and (min-width: 1000px) {
+            position: absolute;
+            margin: 8px;
+            top: 30px;
+            left: 45px;
         }
     }
 }
 .nav-menu {
     border: 0;
-    background-color: #FFFFFF;
+    background-color: var(--primary-bg-color);
     padding: 0;
+    fill: #FFFFFF;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 530px) {
         display: none;
     }
 
@@ -150,22 +109,23 @@
         }
     }
 }
-
 .mobile-menu {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #FFFFFF;
+    background-color: var(--primary-bg-color);
+    background-image: url(../img/bg@2x.png);
+    background-size: cover;
 
-    padding: 48px 40px;
+    padding: 60px 40px;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    transform: translateY(-200%);
+    transform: translateX(200%);
     transition: transform 250ms linear;
 
     @media screen and (min-width: 768px) {
@@ -177,7 +137,7 @@
         top: 10px;
         right: 15px;
         border: 0;
-        background-color: #FFFFFF;
+        background-color: var(--primary-bg-color);
         padding: 0;
     }
 
@@ -185,77 +145,45 @@
         border: 0;
         width: 40px;
         height: 40px;
+        fill: #FFFFFF;
 
         .mobile-menu__close-button:hover & {
-            fill: var(--brand-color);
+            fill: #be7c7c;
         }
     }
 
     &__list {
         display: flex;
         flex-direction: column;
+        align-items: center;
 
-        gap: 32px;
+        gap: 40px;
+    }
+    &__item {
+        font-family: sans-serif;
+        color: var(--primary-text-color);
+    }
+    &__subtitle {
+        text-align: center;
+        @include font($fw: 700, $fs: 18px, $lh: 21px, $ls: 0.02em);
+
     }
 
     &__link {
-        @include font($fw: 500, $fs: 40px, $lh: 47px, $ls: 0.02em);
-        color: var(--secondary-text-color);
+        @include font($fw: 600, $fs: 18px, $lh: 21px, $ls: 0.02em);
+        color: var(--primary-text-color);
 
         &:hover {
             color: var(--brand-color);
         }
     }
+    &__icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+    }
 }
 
 .is-open {
     transform: translateY(0);
-}
-
-.mobile-contact {
-    &__list {
-        display: flex;
-        flex-direction: column;
-        gap: 32px;
-        padding-bottom: 10%;
-    }
-
-    &__item {
-        @include font($fw: 500, $fs: 24px, $lh: 28px, $ls: 0.02em);
-        max-width: 480px;
-        min-width: 300px;
-    }
-
-    &__tel {
-        @include font($fs: 34px, $lh: 40px, $ls: 0.02em);
-        color: var(--brand-color);
-    }
-
-    &__mail {
-        color: var(--primary-text-color);
-    }
-
-}
-
-.mobile-social {
-    &__list {
-        display: flex;
-        justify-content: space-around;
-    }
-
-    &__link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-        border: 1px solid var(--brand-color);
-    }
-
-    &__icon {
-        width: 27px;
-        height: 27px;
-        fill: var(--brand-color);
-    }
 }
