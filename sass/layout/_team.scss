@@ -1,132 +1,91 @@
 .team {
-    background-color: #F5F4FA;
-    background-position: center;
-    margin-top: 60px;
+    background-color: #FFFFFF;
+}
+.team-card {
+    padding-top: 60px;
+    padding-bottom: 60px;
 
-    @media screen and (min-width: 1200px) {
-        margin-top: 94px;
+    &__title {
+        text-align: center;
+        @include font($fw: 600, $fs: 48px, $lh: 60px, $ls: -1px);
+        color: var(--secondary-text-color);
     }
 }
 
 .card {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    @media screen and (min-width: 1200px) {
-        padding-top: 94px;
-        padding-bottom: 94px;
-    }
-
-    &__title {
-        @include font($fw: 700, $fs: 36px, $lh: 42px);
-        text-align: center;
-        color: var(--title-text-color);
-    }
-
-    &__list {
-        margin-top: 30px;
+    margin-top: 40px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    
+    &__wrapper {
         display: flex;
         flex-direction: column;
-        gap: 30px;
-
-        @media screen and (min-width: 768px) {
-            flex-direction: row;
-            flex-wrap: wrap;
-        }
-        @media screen and (min-width: 1200px) {
-            margin-top: 50px;
-            flex-wrap: nowrap;
-        }
+        align-items: center;
+        padding-bottom: 20px;
     }
-
     &__item {
         display: block;
-        text-align: center;
-        max-width: 100%;
-        background: #FFFFFF;
-        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-        border-radius: 0px 0px 4px 4px;
-
-        @media screen and (min-width: 768px) {
-            width: calc((100% - 60px) / 2);
+        border: 1px solid #EEEEEE;
+        border-radius: 3px;
+        &:hover {
+            border: 0px solid #EEEEEE;
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+        }
+        @media screen and (min-width: 500px) {
+            max-width: 380px;
+            width: calc((100% - 20px) / 2);
             
             &:nth-child(2n) {
                 margin-right: 0px;
             }
-        }        
-        @media screen and (min-width: 1200px) {
-            width: calc((100% - 90px) / 4);
+        }
+        @media screen and (min-width: 768px) {
+            width: calc((100% - 20px) / 3);
             
-            &:nth-child(4n) {
+            &:nth-child(3n) {
                 margin-right: 0px;
             }
         }
     }
-    &__img {
-        object-fit: cover;
-        width: 450px;
-        height: 460px;
-        @media screen and (min-width: 1200px) {
-            width: 270px;
-            height: 260px;
-        }
-    }
-
     &__subtitle {
-        margin-top: 30px;
-        margin-bottom: 10px;
-        @include font($fw: 500, $fs: 16px, $lh: 19px);
+        margin-top: 50px;
+        text-align: center;
+        @include font($fw: 700, $fs: 24px, $lh: 34px, $ls: -1px);
+        color: var(--secondary-text-color);
 
-        color: var(--title-text-color);
     }
-
     &__text {
-        @include font($fs: 16px, $lh: 19px);
-        color: var(--primary-text-color);
+        margin-top: 30px;
+        text-align: center;
+        @include font($fw: 400, $fs: 16px, $lh: 24px, $ls: -1px);
+        color: var(--secondary-text-color);
+
     }
-}
+    &__button {
+        margin-top: 30px;
+        text-align: center;
+        width: 188px;
+        height: 68px;
+        background: #FED84C;
+        border-radius: 8px;
+        @include font($fw: 500, $fs: 18px, $lh: 27px, $ls: -1px);
+        color: var(--secondary-text-color);
+        border: none;
+        transition-property: transform;
+        transition-duration: 300ms;
 
-.social-link {
-    display: flex;
-    justify-content: center;
-    margin-top: 16px;
-    margin-bottom: 24px;
-    @media screen and (min-width: 1200px) {
-        display: block;
-        margin-bottom: 30px;
-    }
-
-    &__list {
-        display: flex;
-        margin: 0px;
-        gap: 10px;
-        justify-content: center;
-    }
-
-    &__link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-        transition: background-color var(--transition-property);
-
-
-        &:hover,
-        &:focus {
-            background-color: var(--brand-color);
+        &:hover {
+            background-color: #e3ba29;
         }
-    }
-
-    &__icon {
-        fill: #AFB1B8;
-        width: 20px;
-        height: 20px;
-        transition: fill var(--transition-property);
-
-        .social-link__link:hover &,
-        .social-link__link:focus & {
-            fill: #FFFFFF;
+        &:active {
+            background-color: #8c741e;
         }
+
     }
+
 }
