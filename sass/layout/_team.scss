@@ -57,21 +57,21 @@
         }
     }
     &__subtitle {
-        margin-top: 50px;
+        margin-top: 20px;
         text-align: center;
         @include font($fw: 700, $fs: 24px, $lh: 34px, $ls: -1px);
         color: var(--secondary-text-color);
 
     }
     &__text {
-        margin-top: 30px;
+        margin-top: 10px;
         text-align: center;
         @include font($fw: 400, $fs: 16px, $lh: 24px, $ls: -1px);
         color: var(--secondary-text-color);
 
     }
     &__button {
-        margin-top: 30px;
+        margin-top: 20px;
         text-align: center;
         width: 188px;
         height: 68px;

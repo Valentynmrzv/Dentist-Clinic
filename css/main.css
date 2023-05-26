@@ -631,7 +631,7 @@ address {
   }
 }
 .card__subtitle {
-  margin-top: 50px;
+  margin-top: 20px;
   text-align: center;
   font-weight: 700;
   font-size: 24px;
@@ -640,7 +640,7 @@ address {
   color: var(--secondary-text-color);
 }
 .card__text {
-  margin-top: 30px;
+  margin-top: 10px;
   text-align: center;
   font-weight: 400;
   font-size: 16px;
@@ -649,7 +649,7 @@ address {
   color: var(--secondary-text-color);
 }
 .card__button {
-  margin-top: 30px;
+  margin-top: 20px;
   text-align: center;
   width: 188px;
   height: 68px;
@@ -692,7 +692,7 @@ address {
     background-color: var(--primary-bg-color);
     background-image: url(../img/bg@2x.png), url(../img/bg-top.png);
     background-repeat: no-repeat;
-    background-size: 1400px 300px;
+    background-size: 1400px 200px;
   }
 }
 
@@ -726,20 +726,6 @@ address {
   }
 }
 
-.preview {
-  width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .preview {
-    max-width: 400px;
-  }
-}
-@media screen and (min-width: 1100px) {
-  .preview {
-    max-width: 550px;
-  }
-}
-
 .info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -756,17 +742,27 @@ address {
 }
 @media screen and (min-width: 768px) {
   .info {
-    width: 300px;
-    height: 300px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 50%;
   }
 }
 .info__title {
-  margin-top: 30px;
   color: var(--primary-text-color);
   font-weight: 700;
   font-size: 30px;
-  line-height: 1.1333333333;
+  line-height: 1.2666666667;
   letter-spacing: -1px;
+}
+@media screen and (min-width: 768px) {
+  .info__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.1666666667;
+    letter-spacing: -1px;
+    text-align: start;
+  }
 }
 @media screen and (min-width: 1050px) {
   .info__title {
@@ -774,14 +770,13 @@ address {
     font-size: 24px;
     line-height: 1.1666666667;
     letter-spacing: -1px;
-    color: var(--primary-text-color);
   }
 }
-@media screen and (min-width: 1050px) {
+@media screen and (min-width: 1200px) {
   .info__title {
     font-weight: 700;
-    font-size: 48px;
-    line-height: 1.25;
+    font-size: 36px;
+    line-height: 1.3333333333;
     letter-spacing: -1px;
     color: var(--primary-text-color);
   }
@@ -794,20 +789,29 @@ address {
   line-height: 1.1;
   letter-spacing: -0.2px;
 }
-@media screen and (min-width: 1050px) {
+@media screen and (min-width: 768px) {
   .info__text {
     font-weight: 600;
-    font-size: 16px;
-    line-height: 1.125;
+    font-size: 14px;
+    line-height: 1.1428571429;
     letter-spacing: -1px;
-    color: var(--primary-text-color);
+    text-align: start;
   }
 }
 @media screen and (min-width: 1050px) {
   .info__text {
     font-weight: 600;
-    font-size: 24px;
-    line-height: 1.4166666667;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    color: var(--primary-text-color);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .info__text {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 1.2727272727;
     letter-spacing: -0.2px;
   }
 }/*# sourceMappingURL=main.css.map */

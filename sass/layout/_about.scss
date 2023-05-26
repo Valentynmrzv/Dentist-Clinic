@@ -11,7 +11,7 @@
         background-color: var(--primary-bg-color);
         background-image: url(../img/bg@2x.png), url(../img/bg-top.png);
         background-repeat: no-repeat;
-        background-size: 1400px 300px;
+        background-size: 1400px 200px;
       
     }
 
@@ -30,21 +30,14 @@
         align-items: center;
         padding-top: 150px;
         padding-bottom: 150px;
+
+        
     }
 
 }
-.preview {
-    width: 100%;
-
-    @media screen and (min-width: 768px) {
-        max-width: 400px;
-    }
-    @media screen and (min-width: 1100px) {
-        max-width: 550px;
-    }
-
-}
-
+// .preview__img {
+//     max-width: 750px;
+// }
 .info {
     display: flex;
     flex-direction: column;
@@ -53,24 +46,28 @@
     padding-left: 30px;
     padding-right: 30px;
     @media screen and (min-width: 768px) {
-        
-
-        width: 300px;
-        height: 300px;
+        align-items: flex-start;
+        width: 50%;
+        // width: 300px;
+        // height: 300px;
     }
     &__title {
-        margin-top: 30px;
         color: var(--primary-text-color);
-        @include font($fw: 700, $fs: 30px, $lh: 34px, $ls: -1px);
-
-        @media screen and (min-width: 1050px) {
+        @include font($fw: 700, $fs: 30px, $lh: 38px, $ls: -1px);
+        
+        @media screen and (min-width: 768px) {
             @include font($fw: 700, $fs: 24px, $lh: 28px, $ls: -1px);
-            color: var(--primary-text-color);
+            text-align: start;
         }
 
 
         @media screen and (min-width: 1050px) {
-            @include font($fw: 700, $fs: 48px, $lh: 60px, $ls: -1px);
+            @include font($fw: 700, $fs: 24px, $lh: 28px, $ls: -1px);
+        }
+
+
+        @media screen and (min-width: 1200px) {
+            @include font($fw: 700, $fs: 36px, $lh: 48px, $ls: -1px);
             color: var(--primary-text-color);
         }
     }
@@ -81,29 +78,18 @@
         
         @include font($fw: 600, $fs: 20px, $lh: 22px, $ls: -0.2px);
 
+        @media screen and (min-width: 768px) {
+            @include font($fw: 600, $fs: 14px, $lh: 16px, $ls: -1px);
+            text-align: start;
+        }
+
         @media screen and (min-width: 1050px) {
-            @include font($fw: 600, $fs: 16px, $lh: 18px, $ls: -1px);
+            @include font($fw: 600, $fs: 20px, $lh: 24px, $ls: -1px);
             color: var(--primary-text-color);
-            }
-        @media screen and (min-width: 1050px) {
-            @include font($fw: 600, $fs: 24px, $lh: 34px, $ls: -0.2px);
+        }
+        @media screen and (min-width: 1200px) {
+            @include font($fw: 600, $fs: 22px, $lh: 28px, $ls: -0.2px);
         }
 
     }
 }
-// .aaa {
-    //     &__list {
-    //         display: flex;
-    //             flex-direction: row;
-    //             align-items: center;
-    //             padding-bottom: 20px;
-    //     }
-    //     &___item {
-    //         max-width: 380px;
-    //             width: calc((100% - 20px) / 2);
-
-    //             &:nth-child(2n) {
-    //                 margin-right: 0px;
-    //             }
-    //     }
-    // }
