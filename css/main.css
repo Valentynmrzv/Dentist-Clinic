@@ -819,8 +819,8 @@ address {
 }
 
 #carousel {
-  -webkit-perspective: 500px;
-          perspective: 500px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
   overflow: hidden;
 }
 #carousel #scene {
@@ -879,25 +879,52 @@ address {
   margin-right: 10px;
 }
 
-.r__wrapper {
+.frame {
+  padding: 10px;
   margin: auto;
-  border-radius: 8px;
-  background-color: #ffffff;
-  min-width: 200px;
-  max-width: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  min-width: 200px;
+  max-width: 450px;
+  background-color: #ffffff;
+  border-radius: 10px;
 }
-.r__item {
+@media screen and (min-width: 768px) {
+  .frame {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
+}
+
+.frame-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+.frame-text__png {
+  width: 20px;
+}
+.frame-text__text {
   color: var(--secondary-text-color);
-  padding: 20px;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 100%;
-          flex: 0 1 100%;
+}
+
+.frame-img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -908,23 +935,12 @@ address {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
-.r__title {
-  color: var(--secondary-text-color);
-  font-size: calc(14px + 2 * (100vw - 420px) / 860);
-}
-.r__text {
-  color: var(--secondary-text-color);
-  font-size: calc(14px + 2 * (100vw - 420px) / 860);
-}
-.r__img {
-  width: 70%;
+.frame-img__img {
+  width: 100px;
   border-radius: 50%;
+  overflow: hidden;
 }
-.r__img-text {
+.frame-img__title {
   color: var(--secondary-text-color);
-  font-size: calc(14px + 2 * (100vw - 420px) / 860);
 }/*# sourceMappingURL=main.css.map */

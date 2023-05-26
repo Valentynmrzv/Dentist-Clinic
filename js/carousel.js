@@ -39,7 +39,7 @@ function carouselRUN() {
         interval = setInterval(function() {
             curr_carousel_items_Arrey++;
             scene.style.transform = `rotateY(${(curr_carousel_items_Arrey) * -theta}rad)`;
-        }, 10000);
+        }, 30000);
     }
 
     function setupNavigation() {
