@@ -837,7 +837,7 @@ address {
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 0 5px 0 2.5px;
+  padding: 0 25px 0 12.5px;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
@@ -880,8 +880,9 @@ address {
 }
 
 .frame {
-  padding: 10px;
   margin: auto;
+  padding: 10px;
+  gap: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -889,8 +890,8 @@ address {
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
-  min-width: 200px;
-  max-width: 450px;
+  min-width: 150px;
+  max-width: 300px;
   background-color: #ffffff;
   border-radius: 10px;
 }
@@ -900,13 +901,20 @@ address {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 100%;
-            flex: 0 1 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    max-width: 600px;
+  }
+}
+@media screen and (min-width: 1050px) {
+  .frame {
+    max-width: 600px;
   }
 }
 
 .frame-text {
+  margin-top: 20px;
+  margin-bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -917,8 +925,28 @@ address {
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
+@media screen and (min-width: 768px) {
+  .frame-text {
+    width: 50%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media screen and (min-width: 1050px) {
+  .frame-text {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    margin-left: 60px;
+  }
+}
 .frame-text__png {
   width: 20px;
+}
+@media screen and (min-width: 1050px) {
+  .frame-text__png {
+    width: 40px;
+  }
 }
 .frame-text__text {
   color: var(--secondary-text-color);
@@ -936,11 +964,30 @@ address {
       -ms-flex-align: center;
           align-items: center;
 }
+@media screen and (min-width: 768px) {
+  .frame-img {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 50%;
+  }
+}
 .frame-img__img {
   width: 100px;
   border-radius: 50%;
   overflow: hidden;
 }
+@media screen and (min-width: 768px) {
+  .frame-img__img {
+    width: 140px;
+  }
+}
+@media screen and (min-width: 1050px) {
+  .frame-img__img {
+    width: 175px;
+  }
+}
 .frame-img__title {
+  margin-top: 10px;
   color: var(--secondary-text-color);
 }/*# sourceMappingURL=main.css.map */
