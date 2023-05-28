@@ -3,9 +3,9 @@
 $slide-width: 61%;
 
 // Define gap between the slides
-$slide-separation: 30px;
+$slide-separation: 10px;
 
-$distance: 1000px;
+$distance: 2000px;
 
 #carousel {
     perspective: $distance;
@@ -34,6 +34,7 @@ $distance: 1000px;
     #carousel_btn {
         display: flex;
         justify-content: center;
+        gap: 20px;
         margin: 20px auto 0 auto;
         -moz-user-select: none;
         -ms-user-select: none;
@@ -55,7 +56,8 @@ $distance: 1000px;
         cursor: pointer;
         transition: all 0.3s;
         background-color: #FED84C;
-        fill: #2f2f2f;
+        font-weight: 800;
+        font-size: 30px;
         display: flex;
         justify-content: center;
         align-items: center;

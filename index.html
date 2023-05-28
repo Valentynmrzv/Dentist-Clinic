@@ -343,8 +343,25 @@
                 <button class="btn next">>
                 </button>
             </div>
-          
         </section>
+        <footer class="footer section">
+            <form class="footer__wrapper container">
+                <div class="form">
+                    <h2 class="form__title">Запишіться на огляд!</h2>
+                    <p class="form__text">Лікар огляне Вас та виявить усі можливі захворювання на ранній стадії</p>
+                    <div class="form__input">
+                        <span class="form__wrapper">
+                            <input type="tel" name="phone" class="form__phone" id="user_phone" required
+                                pattern="[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}" title="0960000000" placeholder="Номер телефону">
+                                <svg class="form__icon">
+                                    <use href="./img/sprite.svg#icon-phone"></use>
+                                </svg>
+                        </span>
+                        <button class="form__button">Відправити</button>
+                    </div>
+                </div>
+            </form>
+        </footer>
     </main>
     <script src="./js/carousel.js"></script>
     <script src="./js/modal.js"></script>

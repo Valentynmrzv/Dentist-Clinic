@@ -54,7 +54,7 @@
     }
     &__title {
         color: var(--primary-text-color);
-        @include font($fw: 700, $fs: 30px, $lh: 38px, $ls: -1px);
+        @include font($fw: 700, $fs: 26px, $lh: 32px, $ls: -1px);
         
         @media screen and (min-width: 768px) {
             @include font($fw: 700, $fs: 24px, $lh: 28px, $ls: -1px);
