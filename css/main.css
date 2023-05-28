@@ -60,7 +60,6 @@ address {
   margin: 0 auto;
   padding: 0;
   max-width: 1400px;
-  outline: 1px solid red;
 }
 
 .container {
@@ -69,7 +68,6 @@ address {
   margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px;
-  outline: 1px solid green;
 }
 
 .header {
@@ -837,7 +835,7 @@ address {
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 0 25px 0 12.5px;
+  padding: 0 15px 0 7.5px;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
@@ -847,7 +845,12 @@ address {
   top: 0;
 }
 #carousel #carousel_btn {
-  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 20px auto 0 auto;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -855,8 +858,8 @@ address {
           user-select: none;
 }
 #carousel #carousel_btn .btn {
-  width: 45px;
-  height: 45px;
+  width: 60px;
+  height: 60px;
   line-height: 40px;
   padding-left: 7px;
   -webkit-box-sizing: border-box;
@@ -870,6 +873,17 @@ address {
   cursor: pointer;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  background-color: #FED84C;
+  fill: #2f2f2f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 #carousel #carousel_btn .btn:hover {
   color: #ffffff;
@@ -879,10 +893,57 @@ address {
   margin-right: 10px;
 }
 
+.reviews {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background-image: url(../img/bg-mobile.png), url(../img/bg-top.png);
+  background-size: 960px 200px;
+  background-repeat: no-repeat;
+  background-position: 100% 100%, 0 0;
+}
+@media screen and (min-width: 800px) {
+  .reviews {
+    background-image: url(../img/bg-tablet.png), url(../img/bg-top.png);
+    background-size: 1200px 200px;
+  }
+}
+@media screen and (min-width: 1050px) {
+  .reviews {
+    background-color: var(--primary-bg-color);
+    background-image: url(../img/bg@2x.png), url(../img/bg-top.png);
+    background-repeat: no-repeat;
+    background-size: 1400px 200px;
+    padding-top: 180px;
+    padding-bottom: 180px;
+  }
+}
+.reviews__title {
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+@media screen and (min-width: 800px) {
+  .reviews__title {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 1.1538461538;
+    letter-spacing: -1px;
+  }
+}
+@media screen and (min-width: 1050px) {
+  .reviews__title {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.4;
+    letter-spacing: -1px;
+  }
+}
+
 .frame {
   margin: auto;
   padding: 10px;
-  gap: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -897,24 +958,25 @@ address {
 }
 @media screen and (min-width: 768px) {
   .frame {
+    gap: 20px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding-left: 50px;
-    padding-right: 50px;
-    max-width: 600px;
+    padding: 50px;
+    max-width: 500px;
   }
 }
 @media screen and (min-width: 1050px) {
   .frame {
     max-width: 600px;
+    padding: 10px;
   }
 }
 
 .frame-text {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -950,16 +1012,16 @@ address {
 }
 .frame-text__text {
   color: var(--secondary-text-color);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.1428571429;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.1666666667;
   letter-spacing: -1px;
 }
 @media screen and (min-width: 768px) {
   .frame-text__text {
     font-weight: 500;
-    font-size: 24px;
-    line-height: 1.25;
+    font-size: 16px;
+    line-height: 1.125;
     letter-spacing: -1px;
   }
 }

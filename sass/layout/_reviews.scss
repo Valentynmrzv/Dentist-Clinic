@@ -3,7 +3,7 @@
 $slide-width: 61%;
 
 // Define gap between the slides
-$slide-separation: 50px;
+$slide-separation: 30px;
 
 $distance: 1000px;
 
@@ -32,7 +32,8 @@ $distance: 1000px;
     }
 
     #carousel_btn {
-        width: 100px;
+        display: flex;
+        justify-content: center;
         margin: 20px auto 0 auto;
         -moz-user-select: none;
         -ms-user-select: none;
@@ -40,8 +41,8 @@ $distance: 1000px;
     }
 
     #carousel_btn .btn {
-        width: 45px;
-        height: 45px;
+        width: 60px;
+        height: 60px;
         line-height: 40px;
         padding-left: 7px;
         box-sizing: border-box;
@@ -53,6 +54,13 @@ $distance: 1000px;
         font-size: 14px;
         cursor: pointer;
         transition: all 0.3s;
+        background-color: #FED84C;
+        fill: #2f2f2f;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
     }
 
     #carousel_btn .btn:hover {
@@ -65,30 +73,46 @@ $distance: 1000px;
     }
 }
 
-// .reviews-card {
-//     max-width: 600px;
-//     margin: 0 auto;
-//     min-width: 100%;
-//     &__item {
-//         border-radius: 10px;
-//         background-color: #ffffff;
+.reviews { 
+    padding-top: 150px;
+    padding-bottom: 150px;
+    background-image: url(../img/bg-mobile.png), url(../img/bg-top.png);
+    background-size: 960px 200px;
+    background-repeat: no-repeat;
+    background-position: 100% 100%, 0 0;
+
+    @media screen and (min-width: 800px) {
+        background-image: url(../img/bg-tablet.png), url(../img/bg-top.png);
+        background-size: 1200px 200px;
+    }
+
+    @media screen and (min-width: 1050px) {
+        background-color: var(--primary-bg-color);
+        background-image: url(../img/bg@2x.png), url(../img/bg-top.png);
+        background-repeat: no-repeat;
+        background-size: 1400px 200px;
+        padding-top: 180px;
+        padding-bottom: 180px;
+
+    }
+    &__title {
+        text-align: center;
+        @include font($fw: 500, $fs: 20px, $lh: 22px, $ls: -1px);
         
-//     }
-    
-// }
-// .frame {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: flex-start;
-//     padding: 10px;
-//     position: relative;
+        @media screen and (min-width: 800px) {
+        @include font($fw: 500, $fs: 26px, $lh: 30px, $ls: -1px);
+        }
+        @media screen and (min-width: 1050px) {
+        @include font($fw: 500, $fs: 40px, $lh: 56px, $ls: -1px);
+        }
+
+    }
 
     
-// }
+}
 .frame {
     margin: auto;
     padding: 10px;
-    gap: 20px;
     display: flex;
     flex-direction: column-reverse;
     min-width: 150px;
@@ -97,19 +121,20 @@ $distance: 1000px;
     border-radius: 10px;
 
     @media screen and (min-width: 768px) {
+        gap: 20px;
         flex-direction: row;
-        padding-left: 50px;
-        padding-right: 50px;
-        max-width: 600px;
+        padding: 50px;
+        max-width: 500px;
     }
     @media screen and (min-width: 1050px) {
         max-width: 600px;
+        padding: 10px;
 
     }
 }
 .frame-text {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     display: flex;
     flex-direction: column;
     align-self: flex-start;
@@ -136,9 +161,9 @@ $distance: 1000px;
 
     &__text {
         color: var(--secondary-text-color);
-        @include font($fw: 500, $fs: 14px, $lh: 16px, $ls: -1px);
+        @include font($fw: 400, $fs: 12px, $lh: 14px, $ls: -1px);
         @media screen and (min-width: 768px) {
-            @include font($fw: 500, $fs: 24px, $lh: 30px, $ls: -1px);
+            @include font($fw: 500, $fs: 16px, $lh: 18px, $ls: -1px);
         }
     
         @media screen and (min-width: 1050px) {
