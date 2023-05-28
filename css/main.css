@@ -60,7 +60,6 @@ address {
   margin: 0 auto;
   padding: 0;
   max-width: 1400px;
-  outline: 1px solid red;
 }
 
 .container {
@@ -69,7 +68,6 @@ address {
   margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px;
-  outline: 1px solid green;
 }
 
 .header {
