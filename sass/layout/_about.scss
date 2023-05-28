@@ -3,6 +3,7 @@
     background-size: 960px 200px;
     background-repeat: no-repeat;
     background-position: 100% 100%, 0 0;
+    position: relative;
     @media screen and (min-width: 800px) {
         background-image: url(../img/bg-tablet.png), url(../img/bg-top.png);
         background-size: 1200px 200px;
@@ -13,6 +14,29 @@
         background-repeat: no-repeat;
         background-size: 1400px 200px;
       
+    }
+    &__tooth {
+        position: absolute;
+        width: 50px;
+        opacity: 0.5;
+
+        @media screen and (min-width: 800px) {
+            width: 90px;
+        }
+
+
+
+        &.right {
+            top: 50%;
+            right: 20px;
+            transform: rotate(-25deg);
+        }
+
+        &.left {
+            top: 20%;
+            left: 50px;
+            transform: rotate(40deg);
+        }
     }
     
 }
@@ -36,9 +60,9 @@
     }
 
 }
-// .preview__img {
-//     max-width: 750px;
-// }
+.preview__img {
+    z-index: 3;
+}
 .info {
     display: flex;
     flex-direction: column;

@@ -6,9 +6,9 @@
 @import './base/container';
 // @import './components/logo';
 
-// @import './components/backdrop';
-// @import './components/modal';
-// @import './components/modal-form';
+@import './components/backdrop';
+@import './components/modal';
+@import './components/modal-form';
 
 @import './layout/header';
 @import './layout/hero';
@@ -17,7 +17,4 @@
 @import './layout/team';
 @import './layout/about';
 @import './layout/reviews';
-// @import './layout/client';
 @import './layout/footer';
-// @import './layout/portfolio-btn';
-// @import './layout/samples';

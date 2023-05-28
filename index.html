@@ -103,11 +103,13 @@
                     <p class="entery__text">
                         Імплантація зуба без болю за 30 хвилин із гарантією 12 місяців
                     </p>
-                    <button class="entery__button">
+                    <button class="entery__button" data-modal-open>
                         Записатись на консультацію
                     </button>
                 </div>
             </div>
+            <img src="./img/tooth1.png" alt="" class="hero__tooth left">
+            <img src="./img/tooth1.png" alt="" class="hero__tooth right">
         </section>
         <!-- ======================================TEAM=================================== -->
         <section class="team section">
@@ -226,6 +228,7 @@
                 </ul>
             </div>
         </section>
+    
 <!-- =====================================ABOUT============================================== -->
         <section class="about section">
             <div class="about-wrapper container">
@@ -247,6 +250,8 @@
                     Наше завдання – забезпечити комфорт та позитивний настрій нашим пацієнтам, як під час лікування, так і після нього.</p>
                 </div>
             </div>
+            <img src="./img/tooth1.png" alt="" class="about__tooth left">
+            <img src="./img/tooth1.png" alt="" class="about__tooth right">
         </section>
         <section class="reviews section" id="carousel" data-auto="true">
             <h1 class="reviews__title">Почитайте відгуки задоволених клієнтів</h1>
@@ -344,6 +349,8 @@
                 </button>
             </div>
         </section>
+    </main>
+
         <footer class="footer section">
             <form class="footer__wrapper container">
                 <div class="form">
@@ -359,10 +366,52 @@
                         </span>
                         <button class="form__button">Відправити</button>
                     </div>
+
+                    <img src="./img/berry-1.png" alt="" class="form__tooth">
+
+             
                 </div>
             </form>
         </footer>
-    </main>
+        <!-- ==================MODAL============================ -->
+        <div class="backdrop is-hidden" data-modal>
+            <a href="#" class="backdrop-close" data-modal-close-link></a>
+            <div class="modal">
+                <button class="modal__button" data-modal-close>
+                    <svg class="modal__icon" width="11" height="11">
+                        <use href="./img/sprite.svg#icon-x-close"></use>
+                    </svg>
+                </button>
+                <div class="contact-form">
+                    <form class="modal-form">
+                        <b>Залишіть свої дані, ми вам передзвонимо</b>
+                        <label for="user_name" class="contact-form__label">
+                            Ім'я
+                            <span class="contact-form__wrapper">
+                                <input type="text" name="firstName" class="contact-form__input" id="user_name" autofocus
+                                    required minlength="4">
+                                <svg class="modal-form__icon">
+                                    <use href="./img/sprite.svg#icon-user"></use>
+                                </svg>
+                            </span>
+                        </label>
+                        <label for="user_phone" class="contact-form__label">
+                            Телефон
+                            <span class="contact-form__wrapper">
+                                <input type="tel" name="phone" class="contact-form__input" id="user_phone" required
+                                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" title="096-000-00-00"
+                                    placeholder="096-000-00-00">
+                                <svg class="modal-form__icon" width="12" height="12">
+                                    <use href="./img/sprite.svg#icon-phone"></use>
+                                </svg>
+                            </span>
+                        </label>
+                        <button type="submit" class="button-form">Відправити</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
     <script src="./js/carousel.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/mobile-menu.js"></script>

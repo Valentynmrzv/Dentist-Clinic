@@ -4,6 +4,8 @@
     background-repeat: no-repeat;
     background-position: 100% 100%;
 
+    position: relative;
+
     @media screen and (min-width: 800px) { 
         background-image: url(../img/bg-tablet.png);
         background-size: 1200px 200px;
@@ -19,7 +21,27 @@
         padding-top: 90px;
         padding-bottom: 90px;
     }
-    
+    &__tooth {
+        position: absolute;
+        width: 50px;
+        opacity: 0.5;
+        @media screen and (min-width: 800px) {
+            width: 90px;
+        }
+
+
+
+        &.right {
+            top: -10px;
+            right: 20px;
+            transform: rotate(25deg);
+        }
+        &.left {
+            top: 50%;
+            left: 0;
+            transform: rotate(-45deg);
+        }
+    }
 }
 .hero-wrapper {
     display: block;
@@ -85,6 +107,7 @@
         margin-top: 20px;
         min-width: 250px;
         height: 88px;
+        z-index: 3;
         @include font($fw: 700, $fs: 14px, $lh: 16px, $ls: -1px);
         background: #FED84C;
         border-radius: 8px;
