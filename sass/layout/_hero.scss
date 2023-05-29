@@ -112,6 +112,18 @@
         background: #FED84C;
         border-radius: 8px;
         border: none;
+        transition-property: background-color, color, transform;
+        transition-duration: 500ms;
+        transition-timing-function: linear;
+
+        &:hover {
+            color: #fff;
+            background-color: #2f2f2f;
+        }
+    
+        &:active {
+            transform: scale(0.9);
+        }
         @media screen and (min-width: 1050px) {
             margin-top: 20px;
             width: 386px;

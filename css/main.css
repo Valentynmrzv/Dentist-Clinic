@@ -95,6 +95,7 @@ address {
   max-width: 450px;
   height: 360px;
   padding: 40px;
+  z-index: 9;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -156,6 +157,7 @@ address {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  z-index: 9;
 }
 .modal-form b {
   margin-bottom: 12px;
@@ -483,6 +485,7 @@ address {
   background-size: 2400px 500px;
   background-repeat: no-repeat;
   background-position: 100% 100%;
+  z-index: 10;
   padding: 80px 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -764,6 +767,22 @@ address {
   background: #FED84C;
   border-radius: 8px;
   border: none;
+  -webkit-transition-property: background-color, color, -webkit-transform;
+  transition-property: background-color, color, -webkit-transform;
+  transition-property: background-color, color, transform;
+  transition-property: background-color, color, transform, -webkit-transform;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+.entery__button:hover {
+  color: #fff;
+  background-color: #2f2f2f;
+}
+.entery__button:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 @media screen and (min-width: 1050px) {
   .entery__button {
@@ -1314,18 +1333,18 @@ address {
   }
 }
 .frame-img__img {
-  width: 100px;
+  width: 80px;
   border-radius: 50%;
   overflow: hidden;
 }
 @media screen and (min-width: 768px) {
   .frame-img__img {
-    width: 130px;
+    width: 100px;
   }
 }
 @media screen and (min-width: 1050px) {
   .frame-img__img {
-    width: 150px;
+    width: 120px;
   }
 }
 .frame-img__title {
