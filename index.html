@@ -14,8 +14,11 @@
         integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
         crossorigin="anonymous">
     <link rel="stylesheet" href="./css/main.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="/js/go_top.js"></script>
 </head>
 <body>
+    
     <header class="header section">
         <div class="header-wrapper container">
             <nav class="nav">
@@ -24,10 +27,10 @@
                         <a href="" class="nav__link">Стоматологія</a>
                     </li>
                     <li class="nav__item">
-                        <a href="" class="nav__link">Послуги</a>
+                        <a href="#about" class="nav__link">Послуги</a>
                     </li>
                     <li class="nav__item">
-                        <a href="" class="nav__link">Наші лікарі</a>
+                        <a href="#our-team" class="nav__link">Наші лікарі</a>
                     </li>
                 </ul>
             </nav>
@@ -84,7 +87,7 @@
                 </li>
                 <li class="mobile-menu__item">
                     <button class="entery__button" data-mobile-modal-open>
-                        Записатися на консультацію
+                        Записатись на консультацію
                     </button>
                 </li>
             </ul>
@@ -114,7 +117,7 @@
         <!-- ======================================TEAM=================================== -->
         <section class="team section">
             <div class="team-card container">
-                <h2 class="team-card__title">Наші Лікарі</h2>
+                <h2 class="team-card__title" id="our-team">Наші Лікарі</h2>
                 <ul class="card">
                     <li class="card__item">
                         <div class="card__wrapper">
@@ -231,7 +234,7 @@
     
 <!-- =====================================ABOUT============================================== -->
         <section class="about section">
-            <div class="about-wrapper container">
+            <div class="about-wrapper container" id="about">
                 <picture class="preview__img">
                         <source srcset="./img/desk/preview.webp 1x, ./img/desk/preview@2x.webp 2x" media="(min-width: 1200px)"
                             type="image/webp">
@@ -373,6 +376,7 @@
                 </div>
             </form>
         </footer>
+    
         <!-- ==================MODAL============================ -->
         <div class="backdrop is-hidden" data-modal>
             <a href="#" class="backdrop-close" data-modal-close-link></a>
@@ -411,7 +415,7 @@
                 </div>
             </div>
         </div>
-    
+    <script src="./js/go-top.js"></script>
     <script src="./js/carousel.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/mobile-menu.js"></script>

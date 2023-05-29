@@ -278,6 +278,47 @@ address {
           transform: translateY(3px);
 }
 
+#go-top {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  text-align: center;
+  cursor: pointer;
+  display: none;
+  opacity: 0.8;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid black;
+  line-height: 30px;
+  font-weight: 700;
+  -webkit-transition-property: background-color, color, -webkit-transform;
+  transition-property: background-color, color, -webkit-transform;
+  transition-property: background-color, color, transform;
+  transition-property: background-color, color, transform, -webkit-transform;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+@media screen and (min-width: 768px) {
+  #go-top {
+    width: 80px;
+    height: 80px;
+    bottom: 40px;
+    right: 30px;
+  }
+}
+
+#go-top:hover {
+  background-color: #FED84C;
+}
+
+#go-top:active {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
 .header {
   background-color: #081130;
   border-bottom: 3px solid #ECECEC;
@@ -1383,7 +1424,7 @@ address {
 
 .form {
   background-color: #ffffff;
-  border-radius: 5px;
+  border-radius: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
