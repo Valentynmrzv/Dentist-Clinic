@@ -1332,7 +1332,6 @@ address {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 40px;
-  border: 1px solid var(--secondary-text-color);
 }
 @media screen and (min-width: 768px) {
   .reviews-button {
@@ -1345,7 +1344,9 @@ address {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  font-size: 900;
+  border: 1px solid var(--secondary-text-color);
+  font-weight: 900;
+  font-size: 34px;
   background-color: #FED84C;
   color: black;
 }
