@@ -1328,11 +1328,18 @@ address {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   gap: 40px;
   border: 1px solid var(--secondary-text-color);
+}
+@media screen and (min-width: 768px) {
+  .reviews-button {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 .reviews-button .btn {
   width: 60px;

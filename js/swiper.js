@@ -16,11 +16,11 @@ let myImageSlider = new Swiper('.reviews', {
     spaceBetween: 30,
     autoHeight: false,
 
-    centeredSlides: false,
+    centeredSlides: true,
     initialSlide: 0,
     loop: true,
     freeMode: true,
-    speed: 800,
+    speed: 350,
     centeredSlides: true,
 
 
